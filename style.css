@@ -1,0 +1,44 @@
+body{
+    display: flex;
+}
+calculator {
+    display: flex;
+    flex-basis: 40%;
+    flex-direction: column;
+}
+
+button:active {
+    background-color: aliceblue;
+    transform: (0.9);
+}
+#display {
+    border: solid;
+    border-width: medium;
+    padding: 10px 10px 10px 10px;
+
+}
+
+#keypad {
+    display: flex;
+    flex-wrap: wrap;
+}
+#numbers {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 75%;
+}
+
+#num {
+    background-color: rgb(193, 208, 221);
+    flex: 1 1 33%;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+}
+
+#operator {
+    background-color: coral;
+}

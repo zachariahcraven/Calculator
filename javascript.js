@@ -1,18 +1,18 @@
 //functions------------
-function add() {
-    
+function add(numberOne, numberTwo) {
+    return numberOne + numberTwo;
 }
 
-function subtract() {
-
+function subtract(numberOne, numberTwo) {
+    return numberOne - numberTwo;
 }
 
-function multiply() {
-
+function multiply(numberOne, numberTwo) {
+    return numberOne * numberTwo;
 }
 
-function divide() {
-
+function divide(numberOne, numberTwo) {
+    return numberOne / numberTwo;
 }
 
 function operate(numberOne, operater, numberTwo) {
@@ -32,8 +32,26 @@ function operate(numberOne, operater, numberTwo) {
     }
 }
 
-//globalVarables
-let operater;
-let numberOne;
-let numberTwo;
+//globalVarables--------------
+var operater = "";
+var numberOne = "";
+var numberTwo = "";
+var displayContent = "";
 
+//main
+const calculatorButtons = document.querySelectorAll("button");
+const display = document.querySelector("#display");
+const caculator = document.querySelector("#calculator");
+
+display.textContent = displayContent;
+calculatorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (parseInt(button.textContent) !== NaN) {
+            if (numberOne !== null) {
+                numberOne += parseInt(button.textContent);
+                displayContent += parseInt(button.textContent);
+            }
+        }
+        //save operator
+    })
+})
