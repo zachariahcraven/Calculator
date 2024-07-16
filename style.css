@@ -7,38 +7,32 @@ calculator {
     flex-direction: column;
 }
 
+button {
+    flex: 1 1 33%;
+}
 button:active {
     background-color: aliceblue;
     transform: (0.9);
 }
-#display {
+display {
     border: solid;
     border-width: medium;
     padding: 10px 10px 10px 10px;
 
 }
 
-#keypad {
+keypad {
     display: flex;
     flex-wrap: wrap;
 }
-#numbers {
+leftPad {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 75%;
 }
 
-#num {
-    background-color: rgb(193, 208, 221);
-    flex: 1 1 33%;
-}
-
-#operators {
+rightPad {
     display: flex;
     flex-direction: column;
     flex: 1 1 25%;
-}
-
-#operator {
-    background-color: coral;
 }
