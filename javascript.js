@@ -117,19 +117,21 @@ calculatorButtons.forEach(button => {
 })
 operaterButtons.forEach(button => {
     button.addEventListener("click", () => {
-        operaterActive = true;
-        operater = button.textContent;
-        displayContent = numberOne + operater + numberTwo;
-        reBuildUI();
+        if (numberOne !== "") {
+            operaterActive = true;
+            operater = button.textContent;
+            displayContent = numberOne + operater + numberTwo;
+            reBuildUI();
+        }
     })
 })
 equal.addEventListener("click", () => {
     if (numberOne !== "" && numberTwo !== "") {
         numberOne = operate(parseInt(numberOne), operater, parseInt(numberTwo));
+        numberOne = Math.round((numberOne*100))/100;
         numberTwo = "";
         operater = "";
         displayContent = numberOne + operater + numberTwo;
-        numberOne = ""
         operaterActive = false;
         reBuildUI();
     }

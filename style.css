@@ -1,24 +1,40 @@
 body{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    padding: 100px 100px 10px 10px;
 }
 calculator {
     display: flex;
-    flex-basis: 40%;
+    flex-basis: 30%;
     flex-direction: column;
+    border: solid;
+    border-width: thick;
+    margin-top: auto;
+    aspect-ratio: 4/1;
 }
 
 button {
     flex: 1 1 33%;
+    aspect-ratio: 1/1;
+    font-size: 2vw;
 }
 button:active {
+    background-color: aliceblue;
+    transform: (0.9);
+}
+button:hover {
     background-color: aliceblue;
     transform: (0.9);
 }
 display {
     border: solid;
     border-width: medium;
-    padding: 10px 10px 10px 10px;
-
+    aspect-ratio: 4/1;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 5vw;
 }
 
 keypad {
